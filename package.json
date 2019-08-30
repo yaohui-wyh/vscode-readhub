@@ -1,0 +1,223 @@
+{
+	"name": "readhub",
+	"displayName": "ReadHub",
+	"description": "ReadHub VSCode Extension",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.37.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Readhub",
+			"properties": {
+				"readhub.showNotification": {
+					"type": "boolean",
+					"default": true,
+					"description": "是否显示资讯条目更新成功/失败提示",
+					"scope": "application"
+				}
+			}
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "readhub-view",
+					"title": "ReadHub",
+					"icon": "images/logo.png"
+				}
+			]
+		},
+		"views": {
+			"readhub-view": [
+				{
+					"id": "readhubTopicList",
+					"name": "热门话题"
+				},
+				{
+					"id": "readhubNewsList",
+					"name": "科技动态"
+				},
+				{
+					"id": "readhubTechNewsList",
+					"name": "开发者资讯"
+				},
+				{
+					"id": "readhubBlockchainList",
+					"name": "区块链资讯"
+				}
+			]
+		},
+		"menus": {
+			"view/title": [
+				{
+					"command": "readhub.topic.refresh",
+					"when": "view == readhubTopicList",
+					"group": "navigation"
+				},
+				{
+					"command": "readhub.topic.loadMore",
+					"when": "view == readhubTopicList",
+					"group": "navigation"
+				},
+				{
+					"command": "readhub.news.refresh",
+					"when": "view == readhubNewsList",
+					"group": "navigation"
+				},
+				{
+					"command": "readhub.news.loadMore",
+					"when": "view == readhubNewsList",
+					"group": "navigation"
+				},
+				{
+					"command": "readhub.techNews.refresh",
+					"when": "view == readhubTechNewsList",
+					"group": "navigation"
+				},
+				{
+					"command": "readhub.techNews.loadMore",
+					"when": "view == readhubTechNewsList",
+					"group": "navigation"
+				},
+				{
+					"command": "readhub.blockchain.refresh",
+					"when": "view == readhubBlockchainList",
+					"group": "navigation"
+				},
+				{
+					"command": "readhub.blockchain.loadMore",
+					"when": "view == readhubBlockchainList",
+					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "readhub.entry.visit",
+					"when": "viewItem == readhubRefEntry",
+					"group": "inline"
+				},
+				{
+					"command": "readhub.topic.instantView",
+					"when": "viewItem == readhubInstantView",
+					"group": "inline"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "extension.readhub",
+				"title": "ReadHub"
+			},
+			{
+				"command": "readhub.topic.refresh",
+				"title": "刷新",
+				"icon": {
+					"light": "images/light/refresh.png",
+					"dark": "images/dark/refresh.png"
+				}
+			},
+			{
+				"command": "readhub.news.refresh",
+				"title": "刷新",
+				"icon": {
+					"light": "images/light/refresh.png",
+					"dark": "images/dark/refresh.png"
+				}
+			},
+			{
+				"command": "readhub.techNews.refresh",
+				"title": "刷新",
+				"icon": {
+					"light": "images/light/refresh.png",
+					"dark": "images/dark/refresh.png"
+				}
+			},
+			{
+				"command": "readhub.blockchain.refresh",
+				"title": "刷新",
+				"icon": {
+					"light": "images/light/refresh.png",
+					"dark": "images/dark/refresh.png"
+				}
+			},
+			{
+				"command": "readhub.topic.loadMore",
+				"title": "加载更多",
+				"icon": {
+					"light": "images/light/more.png",
+					"dark": "images/dark/more.png"
+				}
+			},
+			{
+				"command": "readhub.news.loadMore",
+				"title": "加载更多",
+				"icon": {
+					"light": "images/light/more.png",
+					"dark": "images/dark/more.png"
+				}
+			},
+			{
+				"command": "readhub.techNews.loadMore",
+				"title": "加载更多",
+				"icon": {
+					"light": "images/light/more.png",
+					"dark": "images/dark/more.png"
+				}
+			},
+			{
+				"command": "readhub.blockchain.loadMore",
+				"title": "加载更多",
+				"icon": {
+					"light": "images/light/more.png",
+					"dark": "images/dark/more.png"
+				}
+			},
+			{
+				"command": "readhub.entry.visit",
+				"title": "访问链接",
+				"icon": {
+					"light": "images/light/forward.png",
+					"dark": "images/dark/forward.png"
+				}
+			},
+			{
+				"command": "readhub.topic.instantView",
+				"title": "查看摘要",
+				"icon": {
+					"light": "images/light/view.png",
+					"dark": "images/dark/view.png"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.37.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"tslint": "^5.12.1",
+		"vscode-test": "^1.0.2",
+		"@types/node-fetch": "^2.5.0"
+	},
+	"dependencies": {
+		"moment": "^2.24.0",
+		"node-fetch": "^2.5.0"
+	}
+}
