@@ -1,9 +1,8 @@
 # Change Log
 
-All notable changes to the "readhub" extension will be documented in this file.
+## [1.0.0]
+### Initial release
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- 展示 Readhub 各板块资讯及摘要信息
+- 支持 PC 本地浏览器访问资讯内容源站
+- 支持快速预览资讯全文

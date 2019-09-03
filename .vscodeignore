@@ -3,6 +3,10 @@
 out/test/**
 src/**
 .gitignore
+.editorconfig
+.azure-pipelines.yml
+package-lock.json
+docs/**
 vsc-extension-quickstart.md
 **/tsconfig.json
 **/tslint.json

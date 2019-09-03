@@ -1,13 +1,26 @@
 {
-	"name": "readhub",
+	"name": "vscode-readhub",
 	"displayName": "ReadHub",
 	"description": "ReadHub VSCode Extension",
 	"version": "1.0.0",
+	"author": "Yaohui Wang",
+	"publisher": "bugbreeder",
+	"license": "Apache-2.0",
+	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.37.0"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alex-yh99/vscode-readhub"
+	},
+	"homepage": "https://github.com/alex-yh99/vscode-readhub",
 	"categories": [
 		"Other"
+	],
+	"keywords": [
+		"Readhub",
+		"RSS Reader"
 	],
 	"activationEvents": [
 		"*"
@@ -112,12 +125,8 @@
 		},
 		"commands": [
 			{
-				"command": "extension.readhub",
-				"title": "ReadHub"
-			},
-			{
 				"command": "readhub.topic.refresh",
-				"title": "刷新",
+				"title": "刷新资讯 [热门话题]",
 				"icon": {
 					"light": "images/light/refresh.png",
 					"dark": "images/dark/refresh.png"
@@ -125,7 +134,7 @@
 			},
 			{
 				"command": "readhub.news.refresh",
-				"title": "刷新",
+				"title": "刷新资讯 [科技动态]",
 				"icon": {
 					"light": "images/light/refresh.png",
 					"dark": "images/dark/refresh.png"
@@ -133,7 +142,7 @@
 			},
 			{
 				"command": "readhub.techNews.refresh",
-				"title": "刷新",
+				"title": "刷新资讯 [开发者资讯]",
 				"icon": {
 					"light": "images/light/refresh.png",
 					"dark": "images/dark/refresh.png"
@@ -141,7 +150,7 @@
 			},
 			{
 				"command": "readhub.blockchain.refresh",
-				"title": "刷新",
+				"title": "刷新资讯 [区块链资讯]",
 				"icon": {
 					"light": "images/light/refresh.png",
 					"dark": "images/dark/refresh.png"
@@ -149,7 +158,7 @@
 			},
 			{
 				"command": "readhub.topic.loadMore",
-				"title": "加载更多",
+				"title": "加载更多 [热门话题]",
 				"icon": {
 					"light": "images/light/more.png",
 					"dark": "images/dark/more.png"
@@ -157,7 +166,7 @@
 			},
 			{
 				"command": "readhub.news.loadMore",
-				"title": "加载更多",
+				"title": "加载更多 [科技动态]",
 				"icon": {
 					"light": "images/light/more.png",
 					"dark": "images/dark/more.png"
@@ -165,7 +174,7 @@
 			},
 			{
 				"command": "readhub.techNews.loadMore",
-				"title": "加载更多",
+				"title": "加载更多 [开发者资讯]",
 				"icon": {
 					"light": "images/light/more.png",
 					"dark": "images/dark/more.png"
@@ -173,7 +182,7 @@
 			},
 			{
 				"command": "readhub.blockchain.loadMore",
-				"title": "加载更多",
+				"title": "加载更多 [区块链资讯]",
 				"icon": {
 					"light": "images/light/more.png",
 					"dark": "images/dark/more.png"
