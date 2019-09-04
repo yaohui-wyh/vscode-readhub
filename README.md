@@ -22,3 +22,7 @@
 
 - [Readhub](https://readhub.cn)
 - [VSCode Extension Samples](https://github.com/microsoft/vscode-extension-samples)
+
+----
+
+> [VSCode 插件开发小记](/docs/develop-note.md)
