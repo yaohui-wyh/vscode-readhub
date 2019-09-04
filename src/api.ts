@@ -3,7 +3,7 @@ import { Constants } from './utils';
 import fetch, { Headers } from 'node-fetch';
 
 export async function getLatestItems<T>(category: RHCategory, pageSize: number = 20): Promise<ApiResult<T[]>> {
-    const cursor = category === RHCategory.JOB ? (new Date()).getTime().toString() : "@null";
+    const cursor = category === RHCategory.JOB ? new Date().getTime().toString() : "@null";
     const ret = await getReadhubResponse<T>(category, cursor, pageSize);
     if (ret.success) {
         return new ApiResult<T[]>(true, undefined, "", ret.result);

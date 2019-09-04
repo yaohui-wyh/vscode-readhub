@@ -87,7 +87,7 @@ export class ReadhubProvider implements vscode.TreeDataProvider<RHTreeItem> {
         }
 
         try {
-            const source = element.command!!.arguments!![0].source;
+            const source = element.command!.arguments![0].source;
             switch (source) {
                 case RHCategory.TOPIC.nameKey:
                     const topicObj = element as RHTopic;
