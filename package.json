@@ -2,7 +2,7 @@
 	"name": "vscode-readhub",
 	"displayName": "ReadHub",
 	"description": "ReadHub VSCode Extension",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "Roger",
 	"publisher": "bugbreeder",
 	"license": "Apache-2.0",

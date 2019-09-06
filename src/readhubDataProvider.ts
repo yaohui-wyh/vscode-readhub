@@ -57,6 +57,14 @@ export class ReadhubProvider implements vscode.TreeDataProvider<RHTreeItem> {
             return item;
         })].filter((obj, idx, arr) => {
             return arr.map(i => i.id).indexOf(obj.id) === idx;
+        }).sort((a, b) => {
+            if (a.category === RHCategory.TOPIC) {
+                return b.order - a.order;
+            } else {
+                const aTime = a.publishDate ? new Date(a.publishDate).getTime() : 0;
+                const bTime = b.publishDate ? new Date(b.publishDate).getTime() : 0;
+                return bTime - aTime;
+            }
         });
     }
 

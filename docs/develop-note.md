@@ -58,6 +58,7 @@ TypeScript 现学现用，不过由于 Google / SO 上问题和解答都很多�
         constructor(public nameKey: string = "") { }
     }
     ```
+
 2. StrickNullChecks 可以让 IDE 更好做空检查，不过没有类似 Kotlin 的 Safe calls (`?.`)，代码出现了不少强制非空断言 (`!.`)，比如 `a?.b?.c` 如果不想啰嗦 `a && a.b && a.b.c || undefined` 只好冒险写 `a!.b!.c`. 在 JSON 反序列化中和写测试用例时碰到。这里有个 [Proposal](https://github.com/tc39/proposal-optional-chaining)，目前在 Stage3
 3. 联合类型（Union Types）`private myDate: Date | undefined` 在 Nullable 变量的类型声明比较方便
 4. TypeScript 类型断言只是编译时的，没有运行时类型检查；所以 Type casting 之后访问对象属性时，还要检查一下
@@ -77,8 +78,6 @@ TypeScript 现学现用，不过由于 Google / SO 上问题和解答都很多�
 CI 效率不错，Azure DevOps 的页面设计个人还是比较喜欢的，视觉链路非常清晰，不像很多面向开发者的产品把一堆有的没的都展示出来。
 
 <img src="https://raw.githubusercontent.com/alex-yh99/vscode-readhub/master/docs/ci.png" width=600>
-
-----
 
 ## 六、题外
 
