@@ -228,7 +228,7 @@
 		"vscode-test": "^1.0.2"
 	},
 	"dependencies": {
-		"moment": "^2.24.0",
+		"moment": "^2.29.2",
 		"node-fetch": "^2.6.7"
 	}
 }
